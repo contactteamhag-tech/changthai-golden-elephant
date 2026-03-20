@@ -13,7 +13,7 @@
     name="keywords"
     content="Chang Thai Köln, Thai Restaurant Köln, Thaiküche Sülz, Berrenrather Straße 196, Thai Lieferservice Köln, Pad Thai Köln, Curry Köln"
   />
-  <meta name="theme-color" content="#0f1916" />
+  <meta name="theme-color" content="#ececec" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,17 +24,17 @@
 
   <style>
     :root{
-      --bg:#08110f;
-      --bg-soft:#0d1715;
-      --card:#101b18;
-      --card-2:#13211d;
-      --line:rgba(215,177,82,.20);
-      --gold:#d8b15a;
-      --gold-strong:#f0cc74;
-      --text:#f8f4ea;
-      --muted:#cdbf9d;
-      --white-soft:rgba(255,255,255,.84);
-      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --bg:#ececec;
+      --bg-soft:rgba(255,255,255,.72);
+      --card:rgba(255,255,255,.88);
+      --card-2:rgba(255,255,255,.78);
+      --line:rgba(184,128,20,.18);
+      --gold:#b88314;
+      --gold-strong:#d4a437;
+      --text:#2a1d08;
+      --muted:#6f5a2a;
+      --white-soft:rgba(42,29,8,.82);
+      --shadow:0 20px 60px rgba(84,60,12,.12);
       --radius:24px;
       --radius-lg:34px;
       --max:1240px;
@@ -42,15 +42,18 @@
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(216,177,90,.13), transparent 34%),
-        radial-gradient(circle at 90% 10%, rgba(216,177,90,.10), transparent 22%),
-        linear-gradient(180deg, #0a1311 0%, #07100f 45%, #091412 100%);
+      background-color:var(--bg);
+      background-image:url("images/Pattern.web");
+      background-repeat:repeat;
+      background-size:420px auto;
+      background-attachment:fixed;
       overflow-x:hidden;
+      position:relative;
     }
 
     body::before{
@@ -58,12 +61,8 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      opacity:.22;
-      background-image:
-        linear-gradient(45deg, transparent 48%, rgba(216,177,90,.08) 49%, rgba(216,177,90,.08) 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba(216,177,90,.05) 49%, rgba(216,177,90,.05) 51%, transparent 52%);
-      background-size:90px 90px;
-      mask-image:linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.25));
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.70) 0%, rgba(255,255,255,.76) 100%);
       z-index:0;
     }
 
@@ -89,8 +88,9 @@
       top:0;
       z-index:100;
       backdrop-filter:blur(16px);
-      background:rgba(7,13,12,.74);
-      border-bottom:1px solid rgba(216,177,90,.12);
+      background:rgba(255,255,255,.76);
+      border-bottom:1px solid rgba(184,128,20,.14);
+      box-shadow:0 8px 28px rgba(84,60,12,.06);
     }
 
     .topbar-inner{
@@ -113,10 +113,11 @@
       height:74px;
       object-fit:contain;
       border-radius:18px;
-      background:rgba(255,255,255,.94);
+      background:rgba(255,255,255,.98);
       padding:6px;
-      box-shadow:0 10px 30px rgba(0,0,0,.18);
+      box-shadow:0 10px 30px rgba(84,60,12,.10);
       flex-shrink:0;
+      border:1px solid rgba(184,128,20,.10);
     }
 
     .brand-copy{
@@ -127,7 +128,7 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
-      color:var(--gold-strong);
+      color:var(--gold);
       font-size:.78rem;
       letter-spacing:.22em;
       text-transform:uppercase;
@@ -148,6 +149,7 @@
       line-height:.95;
       font-weight:700;
       letter-spacing:.02em;
+      color:#3c2a0e;
     }
 
     .brand-sub{
@@ -167,22 +169,22 @@
     .nav a{
       padding:10px 14px;
       border-radius:999px;
-      color:var(--white-soft);
+      color:rgba(60,42,14,.84);
       font-weight:600;
       font-size:.96rem;
       transition:.25s ease;
     }
 
     .nav a:hover{
-      color:var(--text);
-      background:rgba(216,177,90,.10);
+      color:#2a1d08;
+      background:rgba(184,128,20,.08);
     }
 
     .nav .cta{
       background:linear-gradient(135deg, var(--gold) 0%, var(--gold-strong) 100%);
-      color:#1c1404;
+      color:#fff;
       font-weight:800;
-      box-shadow:0 10px 28px rgba(216,177,90,.22);
+      box-shadow:0 10px 28px rgba(184,128,20,.18);
     }
 
     .hero{
@@ -201,9 +203,9 @@
       min-height:720px;
       border-radius:var(--radius-lg);
       overflow:hidden;
-      border:1px solid rgba(216,177,90,.18);
+      border:1px solid rgba(184,128,20,.18);
       box-shadow:var(--shadow);
-      background:#0a1110;
+      background:#fff;
     }
 
     .hero-image{
@@ -219,8 +221,8 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.30) 35%, rgba(0,0,0,.75) 100%),
-        linear-gradient(90deg, rgba(7,11,10,.78) 0%, rgba(7,11,10,.18) 52%, rgba(7,11,10,.08) 100%);
+        linear-gradient(180deg, rgba(255,255,255,.02) 0%, rgba(0,0,0,.16) 42%, rgba(0,0,0,.54) 100%),
+        linear-gradient(90deg, rgba(30,20,6,.38) 0%, rgba(30,20,6,.10) 55%, rgba(30,20,6,.05) 100%);
     }
 
     .hero-content{
@@ -243,8 +245,8 @@
     .badge{
       padding:10px 14px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.20);
+      background:rgba(255,255,255,.18);
       color:#fff;
       font-size:.86rem;
       font-weight:700;
@@ -253,9 +255,9 @@
     }
 
     .badge.gold{
-      background:rgba(216,177,90,.16);
-      border-color:rgba(216,177,90,.24);
-      color:#ffe8b4;
+      background:rgba(212,164,55,.24);
+      border-color:rgba(212,164,55,.30);
+      color:#fff3cf;
     }
 
     .hero h1{
@@ -266,12 +268,14 @@
       font-weight:700;
       max-width:760px;
       text-wrap:balance;
+      color:#fffaf0;
+      text-shadow:0 10px 30px rgba(0,0,0,.25);
     }
 
     .hero p{
       max-width:700px;
       margin:18px 0 28px;
-      color:rgba(255,255,255,.84);
+      color:rgba(255,255,255,.90);
       font-size:1.08rem;
       line-height:1.78;
     }
@@ -298,24 +302,24 @@
 
     .btn-primary{
       background:linear-gradient(135deg, var(--gold) 0%, var(--gold-strong) 100%);
-      color:#1a1305;
-      box-shadow:0 14px 30px rgba(216,177,90,.25);
+      color:#fff;
+      box-shadow:0 14px 30px rgba(184,128,20,.20);
     }
 
     .btn-primary:hover{
       transform:translateY(-1px);
-      box-shadow:0 18px 36px rgba(216,177,90,.30);
+      box-shadow:0 18px 36px rgba(184,128,20,.24);
     }
 
     .btn-secondary{
-      background:rgba(255,255,255,.08);
-      border-color:rgba(255,255,255,.14);
+      background:rgba(255,255,255,.16);
+      border-color:rgba(255,255,255,.22);
       color:#fff;
       backdrop-filter:blur(8px);
     }
 
     .btn-secondary:hover{
-      background:rgba(255,255,255,.13);
+      background:rgba(255,255,255,.24);
     }
 
     .hero-side{
@@ -332,10 +336,11 @@
     .gallery-card{
       border-radius:var(--radius);
       background:
-        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015)),
+        linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.80)),
         linear-gradient(180deg, var(--card), var(--card-2));
       border:1px solid var(--line);
       box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
     }
 
     .info-card{
@@ -351,15 +356,15 @@
     .info-box{
       padding:18px 18px 16px;
       border-radius:18px;
-      border:1px solid rgba(216,177,90,.14);
-      background:rgba(255,255,255,.025);
+      border:1px solid rgba(184,128,20,.12);
+      background:rgba(255,255,255,.54);
     }
 
     .info-label{
       font-size:.76rem;
       text-transform:uppercase;
       letter-spacing:.18em;
-      color:var(--gold-strong);
+      color:var(--gold);
       font-weight:800;
       margin-bottom:10px;
     }
@@ -387,7 +392,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.46) 100%);
+      background:linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.40) 100%);
     }
 
     .photo-caption{
@@ -405,10 +410,11 @@
     .photo-caption strong{
       display:block;
       font-size:1.18rem;
+      color:#fff;
     }
 
     .photo-caption span{
-      color:rgba(255,255,255,.82);
+      color:rgba(255,255,255,.88);
       font-size:.92rem;
       line-height:1.5;
     }
@@ -434,6 +440,7 @@
       font-size:clamp(2.2rem, 4vw, 3.8rem);
       line-height:.95;
       font-weight:700;
+      color:#3b2a10;
     }
 
     .section-head p{
@@ -473,14 +480,14 @@
     .mini-point{
       padding:18px;
       border-radius:18px;
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(216,177,90,.12);
+      background:rgba(255,255,255,.56);
+      border:1px solid rgba(184,128,20,.12);
     }
 
     .mini-point strong{
       display:block;
       margin-bottom:8px;
-      color:var(--gold-strong);
+      color:var(--gold);
       font-size:1.02rem;
     }
 
@@ -498,8 +505,8 @@
     .feature-card{
       padding:22px;
       border-radius:22px;
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(216,177,90,.12);
+      background:rgba(255,255,255,.56);
+      border:1px solid rgba(184,128,20,.12);
     }
 
     .feature-card strong{
@@ -530,8 +537,8 @@
       margin-bottom:12px;
       padding:8px 11px;
       border-radius:999px;
-      background:rgba(216,177,90,.12);
-      color:var(--gold-strong);
+      background:rgba(184,128,20,.10);
+      color:var(--gold);
       font-size:.78rem;
       font-weight:800;
       letter-spacing:.12em;
@@ -542,6 +549,7 @@
       margin:0 0 10px;
       font-size:1.2rem;
       line-height:1.3;
+      color:#35250d;
     }
 
     .menu-card p{
@@ -578,7 +586,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0) 32%, rgba(0,0,0,.5) 100%);
+      background:linear-gradient(180deg, rgba(0,0,0,0) 32%, rgba(0,0,0,.46) 100%);
     }
 
     .gallery-label{
@@ -612,14 +620,14 @@
     .contact-item{
       padding:18px;
       border-radius:18px;
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(216,177,90,.12);
+      background:rgba(255,255,255,.56);
+      border:1px solid rgba(184,128,20,.12);
     }
 
     .contact-item small{
       display:block;
       margin-bottom:8px;
-      color:var(--gold-strong);
+      color:var(--gold);
       font-weight:800;
       letter-spacing:.12em;
       text-transform:uppercase;
@@ -637,9 +645,9 @@
       padding:30px;
       border-radius:var(--radius);
       background:
-        linear-gradient(180deg, rgba(216,177,90,.16), rgba(216,177,90,.05)),
-        linear-gradient(180deg, #17201b, #101815);
-      border:1px solid rgba(216,177,90,.24);
+        linear-gradient(180deg, rgba(212,164,55,.14), rgba(255,255,255,.88)),
+        linear-gradient(180deg, #fffdf7, #fff9ef);
+      border:1px solid rgba(184,128,20,.20);
       box-shadow:var(--shadow);
       display:flex;
       flex-direction:column;
@@ -656,7 +664,7 @@
       right:-60px;
       top:-80px;
       border-radius:50%;
-      background:radial-gradient(circle, rgba(240,204,116,.22), transparent 68%);
+      background:radial-gradient(circle, rgba(212,164,55,.20), transparent 68%);
     }
 
     .order-panel h3{
@@ -664,51 +672,59 @@
       font-family:"Cormorant Garamond", serif;
       font-size:2.4rem;
       line-height:1;
+      color:#3c2a0e;
+      position:relative;
+      z-index:1;
     }
 
     .order-panel p{
       margin:0 0 22px;
-      color:rgba(255,255,255,.86);
+      color:rgba(42,29,8,.84);
       line-height:1.8;
       max-width:480px;
+      position:relative;
+      z-index:1;
     }
 
     .order-highlights{
       display:grid;
       gap:10px;
       margin-bottom:22px;
+      position:relative;
+      z-index:1;
     }
 
     .order-highlights span{
       display:flex;
       align-items:center;
       gap:10px;
-      color:#fff3d5;
+      color:#6a511f;
       font-weight:600;
     }
 
     .order-highlights span::before{
       content:"•";
-      color:var(--gold-strong);
+      color:var(--gold);
       font-size:1.4rem;
       line-height:1;
     }
 
     .footer{
       padding:28px 0 44px;
-      color:rgba(255,255,255,.64);
+      color:rgba(42,29,8,.72);
     }
 
     .footer-card{
       padding:24px 26px;
       border-radius:22px;
-      border:1px solid rgba(216,177,90,.12);
-      background:rgba(255,255,255,.025);
+      border:1px solid rgba(184,128,20,.12);
+      background:rgba(255,255,255,.70);
       display:flex;
       gap:14px;
       justify-content:space-between;
       align-items:center;
       flex-wrap:wrap;
+      backdrop-filter:blur(8px);
     }
 
     .footer small{
@@ -726,8 +742,8 @@
     .footer-links a{
       padding:10px 14px;
       border-radius:999px;
-      background:rgba(216,177,90,.08);
-      color:#f1d38a;
+      background:rgba(184,128,20,.08);
+      color:#9a6b0d;
       font-size:.92rem;
       font-weight:700;
     }
@@ -769,6 +785,10 @@
       .contact-grid,
       .gallery-grid{
         grid-template-columns:1fr;
+      }
+
+      body{
+        background-size:280px auto;
       }
     }
 
@@ -816,6 +836,10 @@
 
       .photo-card{
         min-height:240px;
+      }
+
+      body{
+        background-size:220px auto;
       }
     }
   </style>
@@ -1000,11 +1024,11 @@
               </div>
 
               <div class="feature-card">
-                <strong>Stil wie bei Mayyah – aber fürs Restaurant geschärft</strong>
+                <strong>Stilvoller Look mit Pattern-Hintergrund</strong>
                 <p>
-                  Edle Typografie, dunkle Grundstimmung, goldene Highlights,
-                  weiche Verläufe und hochwertige Bildrahmen geben der Website
-                  einen luxuriösen Look ohne unübersichtlich zu wirken.
+                  Der neue helle Hintergrund mit wiederholtem Elefantenmuster sorgt
+                  für einen klaren Chang-Thai-Wiedererkennungswert, ohne die Inhalte
+                  zu überladen. Die Cards bleiben hell, edel und gut lesbar.
                 </p>
               </div>
 
@@ -1167,7 +1191,9 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://changthai.koeln/lieferservice/" target="_blank" rel="noopener noreferrer">Zum Lieferservice</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/changthai.koeln/" target="_blank" rel="noopener noreferrer">Instagram ansehen</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/changthai.koeln/" target="_blank" rel="noopener noreferrer" style="color:#6a511f; border-color:rgba(184,128,20,.18); background:rgba(255,255,255,.56);">
+              Instagram ansehen
+            </a>
           </div>
         </aside>
       </div>
