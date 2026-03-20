@@ -65,7 +65,8 @@
       z-index:0;
     }
 
-    img{
+    img,
+    video{
       max-width:100%;
       display:block;
     }
@@ -207,13 +208,18 @@
       background:#fff;
     }
 
-    .hero-image{
+    .hero-image,
+    .hero-video{
       position:absolute;
       inset:0;
       width:100%;
       height:100%;
       object-fit:cover;
       transform:scale(1.02);
+    }
+
+    .hero-video{
+      pointer-events:none;
     }
 
     .hero-overlay{
@@ -495,7 +501,6 @@
       font-size:1.02rem;
     }
 
-    /* Ovale weiße Hintergrundform für die großen Überschriften */
     .section-head.section-head-oval{
       display:flex;
       justify-content:center;
@@ -1410,11 +1415,20 @@
       <div class="container hero-grid">
 
         <div class="hero-panel">
-          <img
-            class="hero-image"
-            src="images/chang thai aussen night.jpg"
-            alt="Chang Thai Köln Außenansicht bei Nacht"
-          />
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="images/chang thai aussen pro.JPG"
+            aria-label="Wok Video im Hero-Bereich"
+          >
+            <source src="images/wok.mp4" type="video/mp4" />
+            Dein Browser unterstützt dieses Video nicht.
+          </video>
+
           <div class="hero-overlay"></div>
 
           <div class="hero-content">
