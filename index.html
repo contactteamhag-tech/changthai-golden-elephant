@@ -7,7 +7,7 @@
   <title>Chang Thai Köln – Original Thaiküche in Sülz</title>
   <meta
     name="description"
-    content="Chang Thai in Köln-Sülz – stilvolle Original Thaiküche, Currys, Suppen, Nudelgerichte und direkte Online-Bestellung mit modernem Bestellsystem."
+    content="Chang Thai in Köln-Sülz – originale Thaiküche, Currys, Wokgerichte, Reis- und Nudelklassiker. Jetzt direkt online bestellen oder im Restaurant vorbeikommen."
   />
   <meta
     name="keywords"
@@ -336,7 +336,8 @@
     .gallery-card,
     .order-shell,
     .checkout-card,
-    .order-mini-card{
+    .order-mini-card,
+    .map-card{
       border-radius:var(--radius);
       background:
         linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.80)),
@@ -377,6 +378,46 @@
       line-height:1.65;
       color:var(--text);
       font-weight:600;
+    }
+
+    .award-box{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(184,128,20,.12);
+      background:rgba(255,255,255,.54);
+      grid-column:1 / -1;
+    }
+
+    .award-icons{
+      display:flex;
+      gap:10px;
+      flex-shrink:0;
+    }
+
+    .award-icons img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:10px;
+      background:#fff;
+      padding:4px;
+      border:1px solid rgba(184,128,20,.10);
+    }
+
+    .award-text strong{
+      display:block;
+      margin-bottom:4px;
+      color:#35250d;
+      font-size:1rem;
+    }
+
+    .award-text span{
+      color:var(--muted);
+      font-size:.94rem;
+      line-height:1.55;
     }
 
     .photo-card{
@@ -1016,8 +1057,7 @@
       margin-top:16px;
     }
 
-    .field,
-    .select{
+    .field{
       width:100%;
       min-height:48px;
       border-radius:16px;
@@ -1053,6 +1093,73 @@
       border:1px dashed rgba(184,128,20,.24);
       color:var(--muted);
       line-height:1.8;
+    }
+
+    .map-card{
+      overflow:hidden;
+      padding:0;
+    }
+
+    .map-grid{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      min-height:460px;
+    }
+
+    .map-copy{
+      padding:34px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.86)),
+        linear-gradient(180deg, #fffdf7, #fff9ef);
+      border-right:1px solid rgba(184,128,20,.12);
+    }
+
+    .map-copy h3{
+      margin:10px 0 14px;
+      font-family:"Cormorant Garamond", serif;
+      font-size:2.7rem;
+      line-height:.95;
+      color:#3c2a0e;
+    }
+
+    .map-copy p{
+      margin:0 0 16px;
+      color:var(--muted);
+      line-height:1.85;
+    }
+
+    .map-info-list{
+      display:grid;
+      gap:12px;
+      margin:22px 0 26px;
+    }
+
+    .map-info-item{
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid rgba(184,128,20,.12);
+      background:rgba(255,255,255,.64);
+    }
+
+    .map-info-item strong{
+      display:block;
+      margin-bottom:6px;
+      color:#35250d;
+      font-size:1rem;
+    }
+
+    .map-info-item span,
+    .map-info-item a{
+      color:var(--muted);
+      line-height:1.6;
+      font-weight:600;
+    }
+
+    .map-embed{
+      min-height:460px;
+      width:100%;
+      height:100%;
+      border:0;
     }
 
     .footer{
@@ -1099,7 +1206,8 @@
       .story-grid,
       .cta-wrap,
       .order-top,
-      .order-layout{
+      .order-layout,
+      .map-grid{
         grid-template-columns:1fr;
       }
 
@@ -1109,6 +1217,11 @@
 
       .checkout-card{
         position:static;
+      }
+
+      .map-copy{
+        border-right:none;
+        border-bottom:1px solid rgba(184,128,20,.12);
       }
     }
 
@@ -1145,6 +1258,10 @@
 
       .menu-buy{
         justify-items:start;
+      }
+
+      .award-box{
+        grid-column:auto;
       }
 
       body{
@@ -1188,7 +1305,8 @@
       .menu-card,
       .order-shell,
       .order-mini-card,
-      .checkout-card{
+      .checkout-card,
+      .map-copy{
         padding:22px;
       }
 
@@ -1249,18 +1367,17 @@
               <span class="badge">Bekannt aus TV</span>
             </div>
 
-            <h1>Thai-Food mit Charakter. Modernes Ambiente. Starker Auftritt.</h1>
+            <h1>Authentische Thai-Küche in Köln-Sülz</h1>
 
             <p>
-              Chang Thai verbindet authentische thailändische Klassiker mit einem
-              stilvollen, urbanen Restaurantgefühl. Vom ersten Blick auf die Fassade
-              bis zum letzten Teller entsteht ein Gesamtbild, das nicht nach Standard,
-              sondern nach Identität aussieht.
+              Frische Zutaten, kräftige Aromen und echte thailändische Klassiker –
+              von würzigen Currys bis zu beliebten Wok- und Nudelgerichten.
+              Vor Ort genießen oder direkt online bestellen.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#bestellen">Online bestellen</a>
-              <a class="btn btn-secondary" href="#kontakt">Tisch & Kontakt</a>
+              <a class="btn btn-primary" href="#bestellen">Jetzt bestellen</a>
+              <a class="btn btn-secondary" href="#kontakt">Kontakt & Anfahrt</a>
             </div>
           </div>
         </div>
@@ -1301,8 +1418,19 @@
               <div class="info-box">
                 <div class="info-label">Bestellung</div>
                 <div class="info-value">
-                  Lieferung & Abholung<br />
+                  Abholung & Lieferung<br />
                   direkt auf dieser Seite
+                </div>
+              </div>
+
+              <div class="award-box">
+                <div class="award-icons">
+                  <img src="images/kabeleins.png" alt="Kabel Eins" />
+                  <img src="images/meinlokaldeinlokal.png" alt="Mein Lokal Dein Lokal" />
+                </div>
+                <div class="award-text">
+                  <strong>Bekannt aus dem TV</strong>
+                  <span>Chang Thai war bereits im TV-Umfeld präsent und steht für einen Auftritt mit Wiedererkennungswert.</span>
                 </div>
               </div>
             </div>
@@ -1315,8 +1443,8 @@
             />
             <div class="photo-caption">
               <div>
-                <strong>Ein Restaurant mit Wiedererkennungswert</strong>
-                <span>Markante Fassade, starke Lichtwirkung und ein unverwechselbarer Auftritt auf der Berrenrather Straße.</span>
+                <strong>Ein Ort mit Atmosphäre</strong>
+                <span>Markante Fassade, warme Lichtstimmung und ein starker Auftritt auf der Berrenrather Straße.</span>
               </div>
             </div>
           </div>
@@ -1330,46 +1458,42 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Restaurant</span>
-            <h2>Authentisch, einladend und visuell stark</h2>
+            <h2>Thai-Aromen, moderne Atmosphäre, herzliche Gastfreundschaft</h2>
           </div>
           <p>
-            Chang Thai positioniert sich nicht als beliebiger Imbiss, sondern als
-            markanter Thai-Spot in Sülz: lebendig, modern und mit einer klaren
-            Handschrift in Küche und Raumgefühl.
+            Chang Thai verbindet traditionelle thailändische Küche mit einem stilvollen Ambiente
+            und ist damit die richtige Adresse für entspanntes Essen, spontane Abholung oder die bequeme Online-Bestellung.
           </p>
         </div>
 
         <div class="story-grid">
           <div class="section-card story-text">
             <p>
-              Die Marke wirkt bereits von außen sofort einprägsam: warmes Licht,
-              das signifikante Elefanten-Branding und ein Auftritt, der sofort
-              Neugier erzeugt. Innen setzt sich das Erlebnis mit einem deutlich
-              hochwertigeren Raumkonzept fort.
+              Im Chang Thai erwartet dich eine Küche, die auf Geschmack, Frische und authentische Würze setzt.
+              Ob aromatische Currys, gebratene Nudeln, Reisgerichte oder feine Vorspeisen – jedes Gericht bringt
+              ein Stück Thailand nach Köln-Sülz.
             </p>
             <p>
-              Gerade diese Verbindung aus Thai-Klassikern, zeitgemäßem Design und
-              urbaner Kölner Lage macht die Seite stark verkaufbar: Sie transportiert
-              nicht nur Speisen, sondern Atmosphäre, Vertrauen und einen klaren
-              Qualitätsanspruch.
+              Dazu kommt eine Atmosphäre, die modern, warm und einladend wirkt. Genau die richtige Mischung aus
+              Restaurant-Erlebnis und unkomplizierter Bestellung für zuhause.
             </p>
 
             <div class="mini-points">
               <div class="mini-point">
-                <strong>Lage mit Frequenz</strong>
-                <span>Gut positioniert in Köln-Sülz auf der Berrenrather Straße – sichtbar, erreichbar und für Stammkunden wie Laufkundschaft attraktiv.</span>
+                <strong>Authentische Gerichte</strong>
+                <span>Klassische Thai-Rezepte mit frischen Zutaten, Kräutern und ausgewogenen Gewürzen.</span>
               </div>
               <div class="mini-point">
-                <strong>Digitale Conversion</strong>
-                <span>Klare Call-to-Actions für Online-Bestellung, Telefonkontakt und direkte Orientierung ohne unnötige Klickwege.</span>
+                <strong>Zentrale Lage</strong>
+                <span>Direkt in Köln-Sülz gelegen und schnell erreichbar – für Restaurantbesuch, Abholung oder Lieferung.</span>
               </div>
               <div class="mini-point">
-                <strong>Starker Markenauftritt</strong>
-                <span>Logo, Licht, Goldakzente und Bildsprache ergeben eine wiedererkennbare Identität mit Premium-Anmutung.</span>
+                <strong>Für jeden Anlass</strong>
+                <span>Ideal für das Mittagessen, das Abendessen mit Freunden oder eine schnelle Online-Bestellung.</span>
               </div>
               <div class="mini-point">
-                <strong>Bestellsystem integriert</strong>
-                <span>Die Bestellung läuft direkt auf der Seite und ist bereits so aufgebaut, dass eine spätere SumUp-Anbindung sauber vorbereitet werden kann.</span>
+                <strong>Direkt online bestellen</strong>
+                <span>Gerichte auswählen, Warenkorb füllen und Bestellung bequem auf der Website vorbereiten.</span>
               </div>
             </div>
           </div>
@@ -1377,29 +1501,26 @@
           <div class="section-card feature-copy">
             <div class="feature-stack">
               <div class="feature-card">
-                <strong>Original Thai-Fokus</strong>
+                <strong>Frische Zutaten & kräftige Würze</strong>
                 <p>
-                  Im Zentrum stehen Currys, Wokgerichte, Reis- und Nudelklassiker,
-                  Thai-Salate und aromatische Vorspeisen – klar gegliedert und
-                  sofort bestellbar.
+                  Viele Gerichte leben von Thai-Basilikum, Kokosmilch, Chili, Zitronengras,
+                  frischem Gemüse und sorgfältig abgestimmten Saucen.
                 </p>
               </div>
 
               <div class="feature-card">
-                <strong>Benutzerfreundliches Ordering</strong>
+                <strong>Vielfältige Auswahl</strong>
                 <p>
-                  Gäste können nach Kategorien filtern, Gerichte suchen,
-                  Abholung oder Lieferung auswählen und den Warenkorb direkt
-                  auf derselben Seite verwalten.
+                  Von Vorspeisen und Salaten über Reis- und Nudelgerichte bis zu beliebten Currys
+                  und Spezialitäten ist für jeden Geschmack etwas dabei.
                 </p>
               </div>
 
               <div class="feature-card">
-                <strong>SumUp-ready</strong>
+                <strong>Vor Ort oder für zuhause</strong>
                 <p>
-                  Das Checkout-Modul ist bewusst so aufgebaut, dass du später
-                  nur noch den Demo-Button gegen einen echten SumUp-Checkout
-                  oder eine API-Anbindung austauschen musst.
+                  Genieße die Speisen im Restaurant oder bestelle schnell und unkompliziert
+                  zur Abholung oder Lieferung.
                 </p>
               </div>
             </div>
@@ -1413,48 +1534,44 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Speisenprofil</span>
-            <h2>Thai-Klassiker, die sofort Lust machen</h2>
+            <h2>Beliebte Klassiker der Thai-Küche</h2>
           </div>
           <p>
-            Von Fingerfood und Thai-Salaten bis hin zu Currys, Reis- und Nudelgerichten:
-            Die Karte ist vielseitig, klar strukturiert und für schnelle Bestellungen optimiert.
+            Die Speisekarte bietet eine große Auswahl an typisch thailändischen Gerichten –
+            frisch zubereitet und übersichtlich für die Online-Bestellung gegliedert.
           </p>
         </div>
 
         <div class="menu-grid">
           <article class="menu-card">
-            <span class="menu-kicker">Fingerfood</span>
-            <h3>Perfekt zum Einstieg</h3>
+            <span class="menu-kicker">Vorspeisen</span>
+            <h3>Der perfekte Einstieg</h3>
             <p>
-              Frühlingsrollen, Gyoza, Hähnchenspieße, Garnelen und weitere Vorspeisen
-              sorgen für einen starken Start und eignen sich ideal zum Teilen.
+              Frühlingsrollen, Gyoza, Garnelen und weitere Starter sorgen für einen aromatischen Auftakt.
             </p>
           </article>
 
           <article class="menu-card">
-            <span class="menu-kicker">Salate & Suppen</span>
-            <h3>Frisch, würzig, typisch Thai</h3>
+            <span class="menu-kicker">Salate</span>
+            <h3>Frisch & würzig</h3>
             <p>
-              Papayasalat, Glasnudelsalat und aromatische Thai-Suppen bringen
-              Frische, Schärfe und Kräuternoten direkt auf die Karte.
+              Typische Thai-Salate mit Kräutern, Limette, Gemüse und je nach Wahl mit Fleisch, Garnelen oder Meeresfrüchten.
             </p>
           </article>
 
           <article class="menu-card">
             <span class="menu-kicker">Currys</span>
-            <h3>Grün, Rot, Panaeng, Massaman</h3>
+            <h3>Kräftig, cremig, aromatisch</h3>
             <p>
-              Die Curry-Linie ist ein Herzstück der Karte: mit Huhn, Rind, Ente,
-              Garnelen, Meeresfrüchten, vegetarisch oder mit Tofu.
+              Grüne, rote, gelbe und Massaman-Currys mit Reis und verschiedenen Zutaten für jeden Geschmack.
             </p>
           </article>
 
           <article class="menu-card">
             <span class="menu-kicker">Wok & Nudeln</span>
-            <h3>Bami, Pad Thai & Phad Sie Lew</h3>
+            <h3>Schnell, beliebt, sättigend</h3>
             <p>
-              Gebratene Nudeln, Reisgerichte und kräftige Wokklassiker sind
-              ideal für Gäste, die schnell bestellen und genau wissen, worauf sie Lust haben.
+              Gebratene Eiernudeln, Reisnudeln und Thai-Wokgerichte gehören zu den beliebtesten Bestellungen.
             </p>
           </article>
         </div>
@@ -1466,29 +1583,28 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Ambiente</span>
-            <h2>Innenarchitektur mit Restaurant-Charakter</h2>
+            <h2>Modern, warm und einladend</h2>
           </div>
           <p>
-            Deine Bilder tragen die Seite stark: vertikale Holzstrukturen, dunkle
-            Decken, satte Grüntöne, Spiegel, Pflanzen und Goldnuancen vermitteln
-            genau das gehobene, moderne Thai-Gefühl, das online sichtbar werden soll.
+            Das Interieur verbindet stilvolle Materialien, angenehmes Licht und markante Details
+            zu einer Atmosphäre, in der man sich sofort wohlfühlt.
           </p>
         </div>
 
         <div class="gallery-grid">
           <figure class="gallery-card">
             <img src="images/innen spiegel.JPG" alt="Chang Thai Innenraum mit Spiegeln" />
-            <figcaption class="gallery-label">Spiegel & Tiefenwirkung</figcaption>
+            <figcaption class="gallery-label">Elegante Raumtiefe</figcaption>
           </figure>
 
           <figure class="gallery-card">
             <img src="images/links sitzecke.JPG" alt="Chang Thai Sitzecke" />
-            <figcaption class="gallery-label">Loungeartige Sitzecke</figcaption>
+            <figcaption class="gallery-label">Gemütliche Sitzbereiche</figcaption>
           </figure>
 
           <figure class="gallery-card">
             <img src="images/restaurant innen.JPG" alt="Chang Thai Restaurant Innenraum" />
-            <figcaption class="gallery-label">Hochwertige Raumstimmung</figcaption>
+            <figcaption class="gallery-label">Stilvolles Restaurantgefühl</figcaption>
           </figure>
         </div>
       </div>
@@ -1499,13 +1615,12 @@
         <div class="contact-card contact-copy" id="kontakt">
           <span class="eyebrow">Kontakt & Besuch</span>
           <h2 style="font-family:'Cormorant Garamond',serif; font-size:3rem; line-height:.95; margin:10px 0 18px;">
-            Vorbeikommen, anrufen oder direkt bestellen
+            Vorbeikommen, bestellen oder direkt anrufen
           </h2>
 
           <p>
-            Die Seite ist jetzt so aufgebaut, dass Gäste direkt handeln können:
-            spontan vorbeikommen, telefonisch anfragen oder sofort online in das
-            integrierte Bestellsystem springen.
+            Ob für einen Restaurantbesuch, eine Abholung oder eine schnelle Lieferung:
+            Chang Thai ist einfach erreichbar und bequem direkt über die Website bestellbar.
           </p>
 
           <div class="contact-grid">
@@ -1532,23 +1647,23 @@
         </div>
 
         <aside class="order-mini-card">
-          <span class="eyebrow" style="margin-bottom:10px;">Jetzt loslegen</span>
-          <h3>Eigenes Bestellsystem statt externer Weiterleitung</h3>
+          <span class="eyebrow" style="margin-bottom:10px;">Jetzt bestellen</span>
+          <h3>Dein Lieblingsgericht in wenigen Klicks</h3>
           <p>
-            Gäste bleiben direkt auf deiner Seite, finden schneller die passenden
-            Gerichte und bauen ihren Warenkorb ohne Umweg auf.
+            Wähle einfach die passende Kategorie, lege deine Gerichte in den Warenkorb
+            und bereite deine Bestellung bequem online vor.
           </p>
 
           <div class="order-highlights">
-            <span>Kategorien, Suche und Warenkorb direkt integriert</span>
-            <span>Abholung und Lieferung im selben Flow</span>
-            <span>Technisch vorbereitet für spätere SumUp-Anbindung</span>
+            <span>Übersichtliche Kategorien</span>
+            <span>Direkt für Abholung oder Lieferung</span>
+            <span>Schnell, mobilfreundlich und unkompliziert</span>
           </div>
 
           <div class="pill-row" style="margin-bottom:18px;">
-            <span class="pill">Direkt auf der Seite</span>
-            <span class="pill">Mobilfreundlich</span>
-            <span class="pill">SumUp-ready</span>
+            <span class="pill">Online bestellen</span>
+            <span class="pill">Abholung</span>
+            <span class="pill">Lieferung</span>
           </div>
 
           <div class="hero-actions">
@@ -1575,8 +1690,8 @@
             <h2>Online bestellen – direkt bei Chang Thai</h2>
           </div>
           <p>
-            Wähle Kategorie, finde dein Gericht, lege es in den Warenkorb und
-            bereite die spätere Checkout-Anbindung an SumUp bereits jetzt strukturiert vor.
+            Finde dein Gericht schnell über Kategorien oder Suche, stelle deine Bestellung zusammen
+            und sende sie bequem zur Abholung oder Lieferung.
           </p>
         </div>
 
@@ -1584,10 +1699,10 @@
           <div class="order-top">
             <div class="order-top-left">
               <span class="eyebrow">Bestellung starten</span>
-              <h3>Benutzerfreundlich, klar und später erweiterbar</h3>
+              <h3>Thai-Klassiker direkt auswählen</h3>
               <p>
-                Das Modul ist für echte Gäste gedacht: schnelle Suche, klare Kategorien,
-                übersichtlicher Warenkorb und saubere Übergabe an einen späteren Bezahlprozess.
+                Entdecke Vorspeisen, Salate, Currys, Reis- und Nudelgerichte und stelle
+                deinen Warenkorb ganz einfach nach Wunsch zusammen.
               </p>
 
               <div class="fulfillment-switch" style="margin-top:20px;">
@@ -1607,8 +1722,7 @@
                 />
               </div>
               <p>
-                Tipp: Gäste finden damit besonders schnell Klassiker wie Currys,
-                gebratene Nudeln, Salate und Vorspeisen.
+                Suche direkt nach deinem Lieblingsgericht oder nutze die Kategorien für eine schnelle Auswahl.
               </p>
             </div>
           </div>
@@ -1658,11 +1772,78 @@
               </div>
 
               <div class="checkout-note">
-                Aktuell ist dies ein sauberes Frontend-Bestellsystem. Für die echte
-                Zahlung kannst du später den Button „Bestellung vorbereiten“ mit
-                SumUp Checkout, SumUp API oder einem Zahlungslink verbinden.
+                Das Bestellsystem ist bereits so aufgebaut, dass später eine Anbindung
+                an SumUp sauber ergänzt werden kann.
               </div>
             </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anfahrt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Standort</span>
+            <h2>Hier findest du Chang Thai</h2>
+          </div>
+          <p>
+            Zentral in Köln-Sülz gelegen und gut erreichbar – ideal für den Restaurantbesuch,
+            die schnelle Abholung oder die Orientierung per Google Maps.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-grid">
+            <div class="map-copy">
+              <span class="eyebrow">Anfahrt & Besuch</span>
+              <h3>Berrenrather Straße 196<br />50937 Köln</h3>
+
+              <p>
+                Chang Thai liegt auf der Berrenrather Straße in Köln-Sülz und ist damit
+                bequem zu Fuß, mit dem Auto oder mit öffentlichen Verkehrsmitteln erreichbar.
+              </p>
+
+              <div class="map-info-list">
+                <div class="map-info-item">
+                  <strong>Adresse</strong>
+                  <span>Berrenrather Straße 196, 50937 Köln</span>
+                </div>
+
+                <div class="map-info-item">
+                  <strong>Telefon</strong>
+                  <a href="tel:+4922129966093">0221 299 660 93</a>
+                </div>
+
+                <div class="map-info-item">
+                  <strong>Öffnungszeiten</strong>
+                  <span>Mo–Sa 11:30–22:00 Uhr<br />So 14:00–22:00 Uhr</span>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&query=Berrenrather+Stra%C3%9Fe+196,+50937+K%C3%B6ln"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Route in Google Maps
+                </a>
+                <a class="btn" href="tel:+4922129966093" style="background:rgba(255,255,255,.72); color:#6a511f; border:1px solid rgba(184,128,20,.16);">
+                  Jetzt anrufen
+                </a>
+              </div>
+            </div>
+
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps?q=Berrenrather%20Stra%C3%9Fe%20196,%2050937%20K%C3%B6ln&z=16&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps Standort Chang Thai Köln"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -1673,13 +1854,13 @@
     <div class="container">
       <div class="footer-card">
         <small>
-          © Chang Thai Köln – stilvolle Original Thaiküche in Köln-Sülz.<br />
-          Diese Landingpage ist als hochwertige GitHub-HTML-Onepager-Struktur mit integriertem Bestellsystem aufgebaut.
+          © Chang Thai Köln – Original Thaiküche in Köln-Sülz.<br />
+          Frisch zubereitet, stilvoll serviert und direkt online bestellbar.
         </small>
 
         <div class="footer-links">
           <a href="#bestellen">Bestellen</a>
-          <a href="https://changthai.koeln/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="#anfahrt">Standort</a>
           <a href="tel:+4922129966093">Anrufen</a>
         </div>
       </div>
@@ -1711,231 +1892,51 @@
       {
         category: "Fingerfood",
         items: [
-          {
-            id: "noey-tord",
-            name: "Noey Tord",
-            desc: "Frittierte Käsebällchen mit Süß-Sauer-Sauce.",
-            price: 6.00,
-            tags: ["starter", "vegetarisch"]
-          },
-          {
-            id: "popia-tord-dr",
-            name: "Popia Tord Dr",
-            desc: "Frittierte Thai-Frühlingsrollen mit Gemüse und Süß-Sauer-Sauce.",
-            price: 6.00,
-            tags: ["starter", "vegetarisch"]
-          },
-          {
-            id: "sate-gai",
-            name: "Sate Gai",
-            desc: "Hähnchenspieße mit Erdnusssauce.",
-            price: 6.50,
-            tags: ["starter", "huhn"]
-          },
-          {
-            id: "gyoza",
-            name: "Gyoza",
-            desc: "Frittierte chinesische Teigtaschen mit Hühnerfleisch und Gemüse.",
-            price: 6.50,
-            tags: ["starter", "huhn"]
-          },
-          {
-            id: "thung-thong",
-            name: "Thung Thong",
-            desc: "Frittierte Teigtaschen mit gehacktem Hühnerfleisch und Zwiebeln.",
-            price: 5.50,
-            tags: ["starter", "huhn"]
-          },
-          {
-            id: "gung-tord",
-            name: "Gung Tord",
-            desc: "Frittierte Garnelen mit Süß-Sauer-Sauce.",
-            price: 6.00,
-            tags: ["starter", "garnelen"]
-          }
+          { id: "noey-tord", name: "Noey Tord", desc: "Frittierte Käsebällchen mit Süß-Sauer-Sauce.", price: 6.00, tags: ["starter", "vegetarisch"] },
+          { id: "popia-tord-dr", name: "Popia Tord Dr", desc: "Frittierte Thai-Frühlingsrollen mit Gemüse und Süß-Sauer-Sauce.", price: 6.00, tags: ["starter", "vegetarisch"] },
+          { id: "sate-gai", name: "Sate Gai", desc: "Hähnchenspieße mit Erdnusssauce.", price: 6.50, tags: ["starter", "huhn"] },
+          { id: "gyoza", name: "Gyoza", desc: "Frittierte chinesische Teigtaschen mit Hühnerfleisch und Gemüse.", price: 6.50, tags: ["starter", "huhn"] },
+          { id: "thung-thong", name: "Thung Thong", desc: "Frittierte Teigtaschen mit gehacktem Hühnerfleisch und Zwiebeln.", price: 5.50, tags: ["starter", "huhn"] },
+          { id: "gung-tord", name: "Gung Tord", desc: "Frittierte Garnelen mit Süß-Sauer-Sauce.", price: 6.00, tags: ["starter", "garnelen"] }
         ]
       },
       {
         category: "Salate",
         items: [
-          {
-            id: "som-tam-thai",
-            name: "Som Tam Thai",
-            desc: "Grüner Papayasalat mit Möhren und Erdnüssen.",
-            price: 7.00,
-            tags: ["salat", "frisch"]
-          },
-          {
-            id: "yam-nuea",
-            name: "Yam Nuea",
-            desc: "Rindfleischsalat mit Gemüse, Zwiebeln und Thai-Kräutern.",
-            price: 7.00,
-            tags: ["salat", "rind"]
-          },
-          {
-            id: "yam-won-sen",
-            name: "Yam Won Sen",
-            desc: "Glasnudelsalat mit Hühnerfleisch, Gemüse, Sellerie und Thai-Kräutern.",
-            price: 7.00,
-            tags: ["salat", "huhn"]
-          },
-          {
-            id: "yam-pla-muek",
-            name: "Yam Pla Muek",
-            desc: "Tintenfischsalat mit Gemüse, Sellerie und Thai-Kräutern.",
-            price: 7.00,
-            tags: ["salat", "tintenfisch"]
-          },
-          {
-            id: "yam-tha-lay",
-            name: "Yam Tha-Lay",
-            desc: "Thai-Meeresfrüchtesalat mit Gemüse und frischen Kräutern.",
-            price: 7.00,
-            tags: ["salat", "meeresfrüchte"]
-          },
-          {
-            id: "pla-gung",
-            name: "Pla Gung",
-            desc: "Würziger Garnelensalat nach Thai-Art.",
-            price: 6.00,
-            tags: ["salat", "garnelen"]
-          }
+          { id: "som-tam-thai", name: "Som Tam Thai", desc: "Grüner Papayasalat mit Möhren und Erdnüssen.", price: 7.00, tags: ["salat", "frisch"] },
+          { id: "yam-nuea", name: "Yam Nuea", desc: "Rindfleischsalat mit Gemüse, Zwiebeln und Thai-Kräutern.", price: 7.00, tags: ["salat", "rind"] },
+          { id: "yam-won-sen", name: "Yam Won Sen", desc: "Glasnudelsalat mit Hühnerfleisch, Gemüse, Sellerie und Thai-Kräutern.", price: 7.00, tags: ["salat", "huhn"] },
+          { id: "yam-pla-muek", name: "Yam Pla Muek", desc: "Tintenfischsalat mit Gemüse, Sellerie und Thai-Kräutern.", price: 7.00, tags: ["salat", "tintenfisch"] },
+          { id: "yam-tha-lay", name: "Yam Tha-Lay", desc: "Thai-Meeresfrüchtesalat mit Gemüse und frischen Kräutern.", price: 7.00, tags: ["salat", "meeresfrüchte"] },
+          { id: "pla-gung", name: "Pla Gung", desc: "Würziger Garnelensalat nach Thai-Art.", price: 6.00, tags: ["salat", "garnelen"] }
         ]
       },
       {
         category: "Für den kleinen Hunger",
         items: [
-          {
-            id: "portion-gebratene-eiernudeln",
-            name: "Portion gebratene Eiernudeln",
-            desc: "Kleine Portion als Beilage oder Snack.",
-            price: 5.00,
-            tags: ["beilage"]
-          },
-          {
-            id: "portion-gebratene-nudeln-ei",
-            name: "Portion gebratene Nudeln mit Ei",
-            desc: "Schnelle kleine Portion für zwischendurch.",
-            price: 5.00,
-            tags: ["beilage"]
-          },
-          {
-            id: "portion-reis-ei",
-            name: "Portion Reis mit Ei",
-            desc: "Klassische kleine Beilage.",
-            price: 5.00,
-            tags: ["beilage"]
-          }
+          { id: "portion-gebratene-eiernudeln", name: "Portion gebratene Eiernudeln", desc: "Kleine Portion als Beilage oder Snack.", price: 5.00, tags: ["beilage"] },
+          { id: "portion-gebratene-nudeln-ei", name: "Portion gebratene Nudeln mit Ei", desc: "Schnelle kleine Portion für zwischendurch.", price: 5.00, tags: ["beilage"] },
+          { id: "portion-reis-ei", name: "Portion Reis mit Ei", desc: "Klassische kleine Beilage.", price: 5.00, tags: ["beilage"] }
         ]
       },
       {
         category: "Reis & Nudelgerichte",
         items: [
-          {
-            id: "bami-phad-vegetarisch",
-            name: "Bami Phad – vegetarisch",
-            desc: "Gebratene Eiernudeln mit frischem Gemüse.",
-            price: 8.00,
-            tags: ["nudeln", "vegetarisch"]
-          },
-          {
-            id: "bami-phad-tofu",
-            name: "Bami Phad – vegetarisch mit Tofu",
-            desc: "Gebratene Eiernudeln mit Gemüse und Tofu.",
-            price: 9.00,
-            tags: ["nudeln", "tofu"]
-          },
-          {
-            id: "bami-phad-tintenfisch",
-            name: "Bami Phad mit Tintenfisch",
-            desc: "Gebratene Eiernudeln mit Gemüse und Tintenfisch.",
-            price: 9.00,
-            tags: ["nudeln", "tintenfisch"]
-          },
-          {
-            id: "bami-phad-garnelen",
-            name: "Bami Phad mit Garnelen",
-            desc: "Gebratene Eiernudeln mit Gemüse und Garnelen.",
-            price: 10.00,
-            tags: ["nudeln", "garnelen"]
-          },
-          {
-            id: "bami-phad-meeresfruechte",
-            name: "Bami Phad mit Meeresfrüchten",
-            desc: "Gebratene Eiernudeln mit Gemüse und Meeresfrüchten.",
-            price: 10.00,
-            tags: ["nudeln", "meeresfrüchte"]
-          },
-          {
-            id: "bami-phad-gebackenes-huhn",
-            name: "Bami Phad mit gebackenem Hähnchenfleisch",
-            desc: "Gebratene Eiernudeln mit Gemüse und knusprigem Hähnchen.",
-            price: 10.00,
-            tags: ["nudeln", "huhn"]
-          },
-          {
-            id: "phad-sie-lew-huhn",
-            name: "Phad Sie Lew mit Hühnerfleisch",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 9.00,
-            tags: ["reisnudeln", "huhn"]
-          },
-          {
-            id: "phad-sie-lew-rind",
-            name: "Phad Sie Lew mit Rindfleisch",
-            desc: "Gebratene Reisnudeln mit frischem Gemüse und Ei.",
-            price: 10.00,
-            tags: ["reisnudeln", "rind"]
-          },
-          {
-            id: "phad-sie-lew-ente",
-            name: "Phad Sie Lew mit knuspriger Ente",
-            desc: "Gebratene Reisnudeln mit Gemüse und knuspriger Ente.",
-            price: 11.00,
-            tags: ["reisnudeln", "ente"]
-          },
-          {
-            id: "phad-sie-lew-fisch",
-            name: "Phad Sie Lew mit Fischfilet",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 9.00,
-            tags: ["reisnudeln", "fisch"]
-          },
-          {
-            id: "phad-sie-lew-tintenfisch",
-            name: "Phad Sie Lew mit Tintenfisch",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 9.00,
-            tags: ["reisnudeln", "tintenfisch"]
-          },
-          {
-            id: "phad-sie-lew-garnelen",
-            name: "Phad Sie Lew mit Garnelen",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 9.00,
-            tags: ["reisnudeln", "garnelen"]
-          },
-          {
-            id: "phad-sie-lew-meeresfruechte",
-            name: "Phad Sie Lew mit Meeresfrüchten",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 10.00,
-            tags: ["reisnudeln", "meeresfrüchte"]
-          },
-          {
-            id: "phad-sie-lew-vegetarisch",
-            name: "Phad Sie Lew – vegetarisch",
-            desc: "Gebratene Reisnudeln mit Gemüse und Ei.",
-            price: 8.00,
-            tags: ["reisnudeln", "vegetarisch"]
-          },
-          {
-            id: "phad-sie-lew-tofu",
-            name: "Phad Sie Lew – vegetarisch mit Tofu",
-            desc: "Gebratene Reisnudeln mit Gemüse, Ei und Tofu.",
-            price: 9.00,
-            tags: ["reisnudeln", "tofu"]
-          }
+          { id: "bami-phad-vegetarisch", name: "Bami Phad – vegetarisch", desc: "Gebratene Eiernudeln mit frischem Gemüse.", price: 8.00, tags: ["nudeln", "vegetarisch"] },
+          { id: "bami-phad-tofu", name: "Bami Phad – vegetarisch mit Tofu", desc: "Gebratene Eiernudeln mit Gemüse und Tofu.", price: 9.00, tags: ["nudeln", "tofu"] },
+          { id: "bami-phad-tintenfisch", name: "Bami Phad mit Tintenfisch", desc: "Gebratene Eiernudeln mit Gemüse und Tintenfisch.", price: 9.00, tags: ["nudeln", "tintenfisch"] },
+          { id: "bami-phad-garnelen", name: "Bami Phad mit Garnelen", desc: "Gebratene Eiernudeln mit Gemüse und Garnelen.", price: 10.00, tags: ["nudeln", "garnelen"] },
+          { id: "bami-phad-meeresfruechte", name: "Bami Phad mit Meeresfrüchten", desc: "Gebratene Eiernudeln mit Gemüse und Meeresfrüchten.", price: 10.00, tags: ["nudeln", "meeresfrüchte"] },
+          { id: "bami-phad-gebackenes-huhn", name: "Bami Phad mit gebackenem Hähnchenfleisch", desc: "Gebratene Eiernudeln mit Gemüse und knusprigem Hähnchen.", price: 10.00, tags: ["nudeln", "huhn"] },
+          { id: "phad-sie-lew-huhn", name: "Phad Sie Lew mit Hühnerfleisch", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 9.00, tags: ["reisnudeln", "huhn"] },
+          { id: "phad-sie-lew-rind", name: "Phad Sie Lew mit Rindfleisch", desc: "Gebratene Reisnudeln mit frischem Gemüse und Ei.", price: 10.00, tags: ["reisnudeln", "rind"] },
+          { id: "phad-sie-lew-ente", name: "Phad Sie Lew mit knuspriger Ente", desc: "Gebratene Reisnudeln mit Gemüse und knuspriger Ente.", price: 11.00, tags: ["reisnudeln", "ente"] },
+          { id: "phad-sie-lew-fisch", name: "Phad Sie Lew mit Fischfilet", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 9.00, tags: ["reisnudeln", "fisch"] },
+          { id: "phad-sie-lew-tintenfisch", name: "Phad Sie Lew mit Tintenfisch", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 9.00, tags: ["reisnudeln", "tintenfisch"] },
+          { id: "phad-sie-lew-garnelen", name: "Phad Sie Lew mit Garnelen", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 9.00, tags: ["reisnudeln", "garnelen"] },
+          { id: "phad-sie-lew-meeresfruechte", name: "Phad Sie Lew mit Meeresfrüchten", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 10.00, tags: ["reisnudeln", "meeresfrüchte"] },
+          { id: "phad-sie-lew-vegetarisch", name: "Phad Sie Lew – vegetarisch", desc: "Gebratene Reisnudeln mit Gemüse und Ei.", price: 8.00, tags: ["reisnudeln", "vegetarisch"] },
+          { id: "phad-sie-lew-tofu", name: "Phad Sie Lew – vegetarisch mit Tofu", desc: "Gebratene Reisnudeln mit Gemüse, Ei und Tofu.", price: 9.00, tags: ["reisnudeln", "tofu"] }
         ]
       },
       {
@@ -1945,87 +1946,27 @@
       {
         category: "Spezialitäten",
         items: [
-          {
-            id: "gaeng-kari-gai",
-            name: "Gaeng Kari Gai",
-            desc: "Gelbes Thai-Curry mit Hühnerfleisch.",
-            price: 9.00,
-            tags: ["curry", "huhn"]
-          },
-          {
-            id: "gai-pad-himapan",
-            name: "Gai Pad Himapan",
-            desc: "Hühnerfleisch mit Cashewkernen nach Thai-Art.",
-            price: 9.00,
-            tags: ["wok", "huhn"]
-          },
-          {
-            id: "chuchi-plaa",
-            name: "Chuchi Plaa",
-            desc: "Fischspezialität mit roter Curry-Basis.",
-            price: 9.00,
-            tags: ["fisch", "spezial"]
-          },
-          {
-            id: "laab-ped",
-            name: "Laab Ped",
-            desc: "Würzig angemachte Entenspezialität nach Thai-Art.",
-            price: 9.00,
-            tags: ["ente", "spezial"]
-          }
+          { id: "gaeng-kari-gai", name: "Gaeng Kari Gai", desc: "Gelbes Thai-Curry mit Hühnerfleisch.", price: 9.00, tags: ["curry", "huhn"] },
+          { id: "gai-pad-himapan", name: "Gai Pad Himapan", desc: "Hühnerfleisch mit Cashewkernen nach Thai-Art.", price: 9.00, tags: ["wok", "huhn"] },
+          { id: "chuchi-plaa", name: "Chuchi Plaa", desc: "Fischspezialität mit roter Curry-Basis.", price: 9.00, tags: ["fisch", "spezial"] },
+          { id: "laab-ped", name: "Laab Ped", desc: "Würzig angemachte Entenspezialität nach Thai-Art.", price: 9.00, tags: ["ente", "spezial"] }
         ]
       }
     ];
 
     const curryBaseDishes = [
-      {
-        prefix: "Gaeng Kiawwaan",
-        desc: "Grünes Curry mit Kokosmilch, Gemüse und Thai-Basilikum."
-      },
-      {
-        prefix: "Gaeng Panaeng",
-        desc: "Panaeng-Curry mit Kokosmilch und feiner Thai-Würze."
-      },
-      {
-        prefix: "Gaeng Massaman",
-        desc: "Massaman-Curry mit Kartoffeln, Erdnüssen und Kokosmilch."
-      },
-      {
-        prefix: "Gaeng Phed",
-        desc: "Rotes Curry mit Kokosmilch, Gemüse und Thai-Kräutern."
-      },
-      {
-        prefix: "Phad Krapao",
-        desc: "Wokgericht mit Thai-Basilikum und kräftiger Würze."
-      },
-      {
-        prefix: "Phad Priew Wan",
-        desc: "Süß-sauer nach Thai-Art mit Gemüse."
-      },
-      {
-        prefix: "Phad Pak",
-        desc: "Gebratenes Gemüse nach Thai-Art mit Reis."
-      },
-      {
-        prefix: "Phad Khing",
-        desc: "Ingwergericht mit Gemüse und Reis."
-      },
-      {
-        prefix: "Phad Prig",
-        desc: "Würziges Chili-Gericht mit Gemüse und Reis."
-      },
-      {
-        prefix: "Phad Kratiam Prikthai",
-        desc: "Knoblauch-Pfeffer-Gericht mit Reis."
-      },
-      {
-        prefix: "Phad Nam Prik Pao",
-        desc: "Gericht mit Thai-Chilipaste und Reis."
-      },
-      {
-        prefix: "Rad Prik Sam Rod",
-        desc: "Süß-scharfes Thai-Gericht mit Reis."
-      }
+      { prefix: "Gaeng Kiawwaan", desc: "Grünes Curry mit Kokosmilch, Gemüse und Thai-Basilikum." },
+      { prefix: "Gaeng Panaeng", desc: "Panaeng-Curry mit Kokosmilch und feiner Thai-Würze." },
+      { prefix: "Gaeng Massaman", desc: "Massaman-Curry mit Kartoffeln, Erdnüssen und Kokosmilch." },
+      { prefix: "Gaeng Phed", desc: "Rotes Curry mit Kokosmilch, Gemüse und Thai-Kräutern." },
+      { prefix: "Phad Krapao", desc: "Wokgericht mit Thai-Basilikum und kräftiger Würze." },
+      { prefix: "Phad Priew Wan", desc: "Süß-sauer nach Thai-Art mit Gemüse." },
+      { prefix: "Phad Pak", desc: "Gebratenes Gemüse nach Thai-Art mit Reis." },
+      { prefix: "Phad Khing", desc: "Ingwergericht mit Gemüse und Reis." },
+      { prefix: "Phad Prig", desc: "Würziges Chili-Gericht mit Gemüse und Reis." },
+      { prefix: "Phad Kratiam Prikthai", desc: "Knoblauch-Pfeffer-Gericht mit Reis." },
+      { prefix: "Phad Nam Prik Pao", desc: "Gericht mit Thai-Chilipaste und Reis." },
+      { prefix: "Rad Prik Sam Rod", desc: "Süß-scharfes Thai-Gericht mit Reis." }
     ];
 
     const curryVariants = [
@@ -2266,8 +2207,7 @@
         `Adresse: ${street}\n` +
         `Notiz: ${note}\n\n` +
         `${orderSummary}\n\n` +
-        `Gesamt: ${euro(total)}\n\n` +
-        `Nächster Schritt: Diesen Button später mit SumUp Checkout verbinden.`
+        `Gesamt: ${euro(total)}`
       );
     });
 
